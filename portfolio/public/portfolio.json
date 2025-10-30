@@ -1,0 +1,53 @@
+{
+  "profile": {
+    "name": "Veera Venkata Sai",
+    "title": "Java Full Stack Developer • React • Spring Boot • Cloud",
+    "location": "Hyderabad, Telangana"
+  },
+  "links": {
+    "resume": "/resume.pdf",
+    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/",
+    "email": "someone@example.com",
+    "phone": "+919999999999"
+  },
+  "about": "Java Full Stack Developer with 3 years of experience building web applications, microservices, and cloud‑native solutions on AWS and Azure. I craft responsive frontends in React/Angular and robust backends with Spring Boot and REST. Experience across process optimization, e‑commerce, and logistics within Agile teams.",
+  "skills": [
+    "Java", "JavaScript", "HTML5", "CSS3", "Bootstrap", "Material-UI", "ReactJS", "Angular", "Redux", "Spring Boot", "REST", "JWT", "MySQL", "PostgreSQL", "Oracle", "MongoDB", "AWS EC2", "S3", "Azure", "Docker", "Jenkins", "Ansible", "OpenStack", "Git", "JIRA", "Postman", "IntelliJ", "Eclipse", "VS Code", "DBeaver", "JUnit", "Mockito", "Selenium", "Microservices", "Kafka", "CICD", "Maven", "Gradle"
+  ],
+  "projects": [
+    { "title": "Qkart", "desc": "E‑commerce web app with cart, checkout, and user auth.", "stack": "React, Redux, Node, REST", "link": "#" },
+    { "title": "QTify", "desc": "Music discovery UI with playlists and search.", "stack": "React, Material UI", "link": "#" },
+    { "title": "QTrip", "desc": "Travel experiences listing with filters and booking.", "stack": "React, REST", "link": "#" }
+  ],
+  "experience": [
+    { "company": "Deloitte", "role": "Consultant", "impact": "Reduced manual intervention by automating deployment workflows." },
+    { "company": "Nisum", "role": "Software Engineer", "impact": "Improved scalability and performance for microservices." },
+    { "company": "Infosys", "role": "System Engineer", "impact": "Delivered features across e‑commerce and logistics." }
+  ],
+  "accomplishments": ["Insta Award (Infosys)", "Rookie of the Quarter (Infosys)", "Applause Award (Deloitte)"],
+  "certifications": [
+    "Spring Boot Developer", "Java Programmer", "Global Agile Developer", "Cloud Beginner", "AZ-900", "AWS Cloud Practitioner", "Oracle AI Foundations"
+  ],
+  "education": {
+    "degree": "Bachelor of Technology",
+    "college": "Vignan's Institute of Information Technology",
+    "cgpa": "9.04",
+    "location": "Guntur, Andhra Pradesh",
+    "year": "2018-2021"
+  },
+  "educationItems": [
+    {
+      "id": "btech",
+      "title": "Bachelor of Technology",
+      "level": "Graduation",
+      "institution": "Vignan's Lara Institute of Technology & Science",
+      "location": "Guntur, Andhra Pradesh",
+      "year": "2018 – 2021",
+      "logo": "/logos/college.png",
+      "grade": "8.04 CGPA"
+    }
+  ]
+}
+
+
