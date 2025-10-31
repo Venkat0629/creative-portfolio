@@ -1,53 +1,137 @@
 {
   "profile": {
-    "name": "Veera Venkata Sai",
-    "title": "Java Full Stack Developer • React • Spring Boot • Cloud",
-    "location": "Hyderabad, Telangana"
+    "name": "Veera Venkata Sai Mane",
+    "title": "SOFTWARE DEVELOPER",
+    "location": "Hyderabad, Telangana - 500081"
   },
   "links": {
     "resume": "/resume.pdf",
-    "github": "https://github.com/",
-    "linkedin": "https://www.linkedin.com/",
-    "email": "someone@example.com",
-    "phone": "+919999999999"
+    "github": "https://github.com/Venkat0629",
+    "linkedin": "https://www.linkedin.com/in/veera-venkata-sai-mane",
+    "email": "venkatsaimane@gmail.com",
+    "phone": "+91 9963064055",
+    "portfolio": "https://www.crio.do/learn/portfolio/venkatsaimane"
   },
-  "about": "Java Full Stack Developer with 3 years of experience building web applications, microservices, and cloud‑native solutions on AWS and Azure. I craft responsive frontends in React/Angular and robust backends with Spring Boot and REST. Experience across process optimization, e‑commerce, and logistics within Agile teams.",
+  "about": "Java Full Stack Developer with 3+ years of experience delivering scalable, high-performance web applications and cloud-native solutions. Adept in designing and implementing RESTful microservices using Spring Boot, integrating cloud platforms (AWS, Azure), and building responsive frontends with React/Angular. Proven track record in improving system efficiency, automating manual tasks, and contributing to Agile teams across e-commerce, logistics and enterprise domains.",
   "skills": [
-    "Java", "JavaScript", "HTML5", "CSS3", "Bootstrap", "Material-UI", "ReactJS", "Angular", "Redux", "Spring Boot", "REST", "JWT", "MySQL", "PostgreSQL", "Oracle", "MongoDB", "AWS EC2", "S3", "Azure", "Docker", "Jenkins", "Ansible", "OpenStack", "Git", "JIRA", "Postman", "IntelliJ", "Eclipse", "VS Code", "DBeaver", "JUnit", "Mockito", "Selenium", "Microservices", "Kafka", "CICD", "Maven", "Gradle"
+    "Java",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "Bootstrap",
+    "Material-UI",
+    "Spring Boot",
+    "ReactJS",
+    "Angular",
+    "Redux",
+    "JPA",
+    "REST",
+    "JWT",
+    "MySQL",
+    "PostgreSQL",
+    "Oracle",
+    "MongoDB",
+    "AWS (EC2, S3)",
+    "Azure",
+    "Docker",
+    "Jenkins",
+    "Ansible",
+    "OpenStack",
+    "Git",
+    "JIRA",
+    "Postman",
+    "IntelliJ IDEA",
+    "Eclipse",
+    "VS Code",
+    "DBeaver",
+    "JUnit",
+    "Mockito",
+    "Selenium",
+    "Microservices",
+    "Kafka",
+    "CI/CD",
+    "Maven",
+    "Gradle"
   ],
   "projects": [
-    { "title": "Qkart", "desc": "E‑commerce web app with cart, checkout, and user auth.", "stack": "React, Redux, Node, REST", "link": "#" },
-    { "title": "QTify", "desc": "Music discovery UI with playlists and search.", "stack": "React, Material UI", "link": "#" },
-    { "title": "QTrip", "desc": "Travel experiences listing with filters and booking.", "stack": "React, REST", "link": "#" }
+    {
+      "title": "Qkart",
+      "desc": "An E-commerce application offering a variety of products. Implemented the core logic for authentication, display and search products, shopping cart and checkout. Enhanced UI for responsive design across devices, ensuring a consistent user experience.",
+      "stack": "React Hooks, Forms, Controlled Components, REST, JSON, React Router, Responsive Design, Debouncing",
+      "link": "OCT 2023 – Project Link"
+    },
+    {
+      "title": "QTify",
+      "desc": "A digital audio streaming service provider that offers free access to music, podcasts, and curated playlists. Created modular UI components including Cards, Carousels, and Buttons optimizing for reusability. Implemented an intuitive genre-based song filtering system using a tab component by modifying the one provided by Material UI, allowing users to browse songs by their preferred genre effortlessly.",
+      "stack": "ReactJS, Module-scoped CSS, Flexbox, Swiper Library usage, API Integration and Data Handling, React Hooks",
+      "link": "DEC 2023 – Project Link"
+    },
+    {
+      "title": "QTrip",
+      "desc": "A travel website for adventure seekers. Created web pages using HTML and CSS and made them dynamic using JavaScript. Improved UX with multi-select filters, image carousels. Implemented conditional rendering of page elements.",
+      "stack": "REST, Responsive Design, JSON, Event Handling, Conditional Rendering, Bootstrap Carousel",
+      "link": "AUG 2023 – Project Link"
+    },
+    {
+      "title": "VibeCart",
+      "desc": "Developed VibeCart, an e-commerce website, leveraging modern frameworks to ensure scalability and performance. Developed a scalable e-commerce platform using Spring Boot and React. Led Account Management and Offer Management Services, designed and implemented core features.",
+      "stack": "Spring Boot, React",
+      "link": "JUNE 2024 – Internal Project"
+    }
   ],
   "experience": [
-    { "company": "Deloitte", "role": "Consultant", "impact": "Reduced manual intervention by automating deployment workflows." },
-    { "company": "Nisum", "role": "Software Engineer", "impact": "Improved scalability and performance for microservices." },
-    { "company": "Infosys", "role": "System Engineer", "impact": "Delivered features across e‑commerce and logistics." }
+    {
+      "company": "Deloitte",
+      "role": "Consultant",
+      "period": "March 2025 – PRESENT",
+      "client": "Dell Inc.",
+      "impact": "Developed and enhanced logistics portals (GOLF, Dragon, TIP, 3PL) for Dell Inc. to streamline order processing and supply chain operations. Migrated legacy systems to microservices architecture, improving scalability, performance, and maintainability. Implemented flag-based feature enablement across backend microservices and frontend for faster, controlled feature rollouts."
+    },
+    {
+      "company": "Nisum Technologies",
+      "role": "Software Engineer",
+      "period": "JUNE 2024 – March 2025",
+      "client": "Williams-Sonoma Inc.",
+      "impact": "Contributed to the Share Cart feature, enabling users to share their shopping carts for collaborative shopping experiences. Developed the Registry feature, allowing users to create event registries, share them with others, and add items seamlessly to the registries for gift purchases."
+    },
+    {
+      "company": "Infosys Ltd",
+      "role": "System Engineer",
+      "period": "JAN 2022 – JUNE 2024",
+      "impact": "Developed and deployed Infosys Polycloud Platform, a multi-cloud management tool, improving cloud resource management by 60%. Integrated 8+ tools (ServiceNow, OpenStack, Ceph, NetApp, Cloudian, OP5Monitor) into the Polycloud framework, enhancing interoperability. Optimized resource utilization and monitored server performance metrics, increasing system efficiency by 50%. Reduced OpenStack server provisioning time by 85% through automation workflows, significantly enhancing operational efficiency. Created comprehensive end-to-end automation solutions using Ansible and integrated APIs, streamlining 18+ use cases, and reducing manual intervention by 70%. Developed Polycloud UI dashboards for trend visualization and forecasting, reducing decision-making time by 65% and improving operational insights. Led cloud decommissioning project, reducing manual efforts and time by 88%, and improving project turnaround times."
+    }
   ],
-  "accomplishments": ["Insta Award (Infosys)", "Rookie of the Quarter (Infosys)", "Applause Award (Deloitte)"],
+  "accomplishments": [
+    "Insta Award (Infosys, 2023, twice): Recognized by Project Manager for outstanding project performance.",
+    "Rookie of the Quarter (Infosys, Mar 2024): Awarded by Technology Architect for exceptional early career impact.",
+    "Applause Award (Deloitte, Oct 2025): Honored by Leadership for delivering high-impact project results."
+  ],
   "certifications": [
-    "Spring Boot Developer", "Java Programmer", "Global Agile Developer", "Cloud Beginner", "AZ-900", "AWS Cloud Practitioner", "Oracle AI Foundations"
+    "Infosys Certified Spring Boot Developer",
+    "Infosys Certified Java Programmer",
+    "Infosys Global Agile Developer Certification",
+    "Infosys Certified Cloud Beginner",
+    "AZ-900 Microsoft Certified Azure Fundamentals",
+    "AWS Certified Cloud Practitioner",
+    "Oracle Cloud Infrastructure AI Foundations Associate"
   ],
   "education": {
-    "degree": "Bachelor of Technology",
-    "college": "Vignan's Institute of Information Technology",
-    "cgpa": "9.04",
-    "location": "Guntur, Andhra Pradesh",
-    "year": "2018-2021"
+    "degree": "Bachelor Of Technology in Mechanical Engineering",
+    "college": "Vignan's Lara Institute of Technology & Science",
+    "cgpa": "8.2 CGPA",
+    "location": "Guntur - Andhra Pradesh",
+    "year": "APR 2021"
   },
   "educationItems": [
     {
       "id": "btech",
-      "title": "Bachelor of Technology",
+      "title": "Bachelor Of Technology in Mechanical Engineering",
       "level": "Graduation",
       "institution": "Vignan's Lara Institute of Technology & Science",
-      "location": "Guntur, Andhra Pradesh",
-      "year": "2018 – 2021",
+      "location": "Guntur - Andhra Pradesh",
+      "year": "APR 2021",
       "logo": "/logos/college.png",
-      "grade": "8.04 CGPA"
+      "grade": "8.2 CGPA"
     }
   ]
 }
-
-
