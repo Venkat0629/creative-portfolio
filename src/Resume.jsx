@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Resume.css';
 
 export default function Resume({ theme }) {
-  const resumeUrl = '/src/assets/Resume.pdf';
+  const resumeUrl = '/Resume.pdf';
   const navigate = useNavigate();
   return (
     <div style={{ textAlign: 'center', margin: '2rem 0' }}>
