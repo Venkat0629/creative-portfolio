@@ -5,9 +5,20 @@ const Skills = ({ skills }) => {
     <section id="skills" className="section">
       <div className="container">
         <h2>Skills</h2>
-        <div className="tags">
+        <div className="tags" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
           {(skills || []).map((s) => (
-            <span className="tag" key={s}>{s}</span>
+            <a
+              href={s.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={s.name}
+            >
+              <img
+                src={s.badge}
+                alt={s.name + ' logo'}
+                className="skill-badge"
+              />
+            </a>
           ))}
         </div>
       </div>
