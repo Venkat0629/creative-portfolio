@@ -13,16 +13,15 @@ import { Routes, Route } from 'react-router-dom'
 import Resume from './Resume'
 
 function App() {
-  const [theme, setTheme] = useState('light')
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    const saved = localStorage.getItem('theme')
-    if (saved === 'dark' || saved === 'light') setTheme(saved)
-  }, [])
+  const getInitialTheme = () => {
+    const saved = localStorage.getItem('theme');
+    return saved === 'dark' || saved === 'light' ? saved : 'light';
+  };
+  const [theme, setTheme] = useState(getInitialTheme());
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
@@ -94,7 +93,7 @@ function App() {
             <Footer name={data?.profile?.name} />
           </>
         } />
-        <Route path="/resume" element={<Resume />} />
+        <Route path="/resume" element={<Resume theme={theme} />} />
       </Routes>
     </div>
   )

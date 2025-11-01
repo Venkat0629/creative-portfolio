@@ -18,7 +18,15 @@ const Hero = ({ loading, profile, links }) => {
           </>
         )}
         <div className="cta" role="group" aria-label="Primary actions">
-          <a className="btn primary" href="/resume" aria-label="Open Resume">View Resume</a>
+          <a className="btn primary view-resume-btn" href="/resume" aria-label="Open Resume">
+            <span className="icon-wrapper">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="8" stroke="currentColor" strokeWidth="2" fill="none" />
+                <path d="M9 5v6m0 0l-3-3m3 3l3-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+            <span className="btn-text">View Resume</span>
+          </a>
         </div>
         <SocialLinks email={links?.email} github={links?.github} linkedin={links?.linkedin} />
       </div>
