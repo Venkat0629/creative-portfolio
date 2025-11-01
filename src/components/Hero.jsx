@@ -18,7 +18,7 @@ const Hero = ({ loading, profile, links }) => {
           </>
         )}
         <div className="cta" role="group" aria-label="Primary actions">
-          <a className="btn primary" href={links?.resume || './resume.pdf'} target="_blank" rel="noopener" aria-label="Open Resume">View Resume</a>
+          <a className="btn primary" href="/resume" aria-label="Open Resume">View Resume</a>
         </div>
         <SocialLinks email={links?.email} github={links?.github} linkedin={links?.linkedin} />
       </div>
