@@ -5,7 +5,7 @@ const About = ({ about }) => {
     <section id="about" className="section">
       <div className="container">
         <h2>About</h2>
-        <p className="subtitle">{about}</p>
+        <p className="subtitle" tabIndex={0} aria-label="About section content">{about}</p>
       </div>
     </section>
   );

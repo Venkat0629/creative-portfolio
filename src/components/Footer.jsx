@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Footer = ({ name }) => {
+const Footer = () => {
   return (
-    <footer>
-      <div className="container">© {new Date().getFullYear()} {name || ''}</div>
+    <footer className="footer" role="contentinfo" tabIndex={0} aria-label="Footer copyright information">
+      <div className="container">
+        <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+      </div>
     </footer>
   );
 };

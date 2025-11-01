@@ -12,6 +12,20 @@ import Footer from './components/Footer'
 import { Routes, Route } from 'react-router-dom'
 import Resume from './Resume'
 
+function handleSectionAnimations() {
+  const revealSections = () => {
+    document.querySelectorAll('.section').forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 80) {
+        section.classList.add('visible');
+      }
+    });
+  };
+  window.addEventListener('scroll', revealSections);
+  revealSections();
+  return () => window.removeEventListener('scroll', revealSections);
+}
+
 function App() {
   const getInitialTheme = () => {
     const saved = localStorage.getItem('theme');
@@ -44,6 +58,10 @@ function App() {
         setLoading(false)
       })
   }, [])
+
+  useEffect(() => {
+    handleSectionAnimations();
+  }, []);
 
   const toggleTheme = () => setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))
   const toggleMenu = () => setMenuOpen((prev) => !prev)

@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const EducationItem = ({ ed }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = React.useState(false);
   return (
     <div className="edu-item">
       <div className="edu-dot" aria-hidden="true"></div>
       <div className="edu-row">
         <img className="edu-logo" src={ed.logo} alt="" role="presentation" />
         <div>
-          <div className="edu-title">{ed.title} — {ed.institution}</div>
+          <h3 className="edu-title">{ed.title} — {ed.institution}</h3>
           <div className="edu-meta">{ed.location ? `${ed.location} • ` : ''}{ed.year}</div>
         </div>
         <div className="edu-actions">
           <div className="edu-badges" aria-label="Badges">
             {(ed.badges || []).map((b) => <span className="edu-badge" key={b}>{b}</span>)}
           </div>
-          <button className="btn" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
+          <button className="btn" aria-expanded={open} aria-controls={`edu-details-${ed.id}`} onClick={() => setOpen((o) => !o)}>
             {open ? 'Hide' : 'Details'}
           </button>
-          {ed.certificateUrl ? <a className="btn" href={ed.certificateUrl} target="_blank" rel="noopener">Certificate</a> : null}
-          {ed.shareUrl ? <a className="btn" href={ed.shareUrl} target="_blank" rel="noopener">Share</a> : null}
+          {ed.certificateUrl ? <a className="btn" href={ed.certificateUrl} target="_blank" rel="noopener" aria-label={`View certificate for ${ed.title}`}>Certificate</a> : null}
+          {ed.shareUrl ? <a className="btn" href={ed.shareUrl} target="_blank" rel="noopener" aria-label={`Share ${ed.title}`}>Share</a> : null}
         </div>
       </div>
-      <div className={`edu-details ${open ? 'open' : ''}`}>
+      <div className={`edu-details ${open ? 'open' : ''}`} id={`edu-details-${ed.id}`}>
         <div className="inner">
           <div>{ed.details}</div>
           <div className="edu-skills" aria-label="Skills acquired">
@@ -43,18 +43,7 @@ const Education = ({ education, educationItems }) => {
           <div className="grid cols-2">
             {educationItems.map((ed) => (
               <article className="card" key={ed.id}>
-                <div className="edu-card-header">
-                  <img className="edu-logo" src={ed.logo} alt="" role="presentation" />
-                  <div>
-                    <h3 className="edu-title">{ed.title}</h3>
-                    <p className="edu-meta">{ed.institution}{ed.location ? ` • ${ed.location}` : ''}</p>
-                  </div>
-                </div>
-                <div className="edu-fields">
-                  <div className="row"><span className="label">Level</span><span className="value">{ed.level || '—'}</span></div>
-                  <div className="row"><span className="label">Grade</span><span className="value">{ed.grade || education?.cgpa || '—'}</span></div>
-                  <div className="row"><span className="label">Year</span><span className="value">{ed.year || education?.year || '—'}</span></div>
-                </div>
+                <EducationItem ed={ed} />
               </article>
             ))}
           </div>

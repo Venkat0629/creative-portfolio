@@ -40,6 +40,7 @@ const Contact = ({ email }) => {
             value={formData.name}
             onChange={handleChange}
             required
+            autoComplete="name"
           />
           <input
             className="input"
@@ -50,6 +51,7 @@ const Contact = ({ email }) => {
             value={formData.email}
             onChange={handleChange}
             required
+            autoComplete="email"
           />
           <textarea
             className="textarea"
@@ -59,12 +61,13 @@ const Contact = ({ email }) => {
             value={formData.message}
             onChange={handleChange}
             required
+            rows={5}
           />
           <div className="actions">
-            <button className="btn primary" type="submit" disabled={isSubmitting}>
+            <button className="btn primary" type="submit" disabled={isSubmitting} aria-busy={isSubmitting} aria-live="polite">
               {isSubmitting ? 'Sending...' : 'Send'}
             </button>
-            <a className="btn" href={`mailto:${email || 'someone@example.com'}`}>Email</a>
+            <a className="btn" href={`mailto:${email || 'someone@example.com'}`} aria-label="Send email via your email client">Email</a>
           </div>
           {submitMessage && <p style={{ marginTop: '1rem', color: submitMessage.includes('Thank you') ? 'green' : 'red' }}>{submitMessage}</p>}
         </form>

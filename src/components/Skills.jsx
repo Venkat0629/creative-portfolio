@@ -12,6 +12,7 @@ const Skills = ({ skills }) => {
               target="_blank"
               rel="noopener noreferrer"
               key={s.name}
+              aria-label={`Learn more about ${s.name}`}
             >
               <img
                 src={s.badge}

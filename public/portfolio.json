@@ -14,69 +14,73 @@
   },
   "about": "Java Full Stack Developer with 3+ years of experience delivering scalable, high-performance web applications and cloud-native solutions. Adept in designing and implementing RESTful microservices using Spring Boot, integrating cloud platforms (AWS, Azure), and building responsive frontends with React/Angular. Proven track record in improving system efficiency, automating manual tasks, and contributing to Agile teams across e-commerce, logistics and enterprise domains.",
   "skills": [
-    { "name": "Java", "badge": "https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white", "logs": "" },
-    { "name": "JavaScript", "badge": "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black", "logs": "" },
-    { "name": "HTML5", "badge": "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white", "logs": "" },
-    { "name": "CSS3", "badge": "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white", "logs": "" },
-    { "name": "Bootstrap", "badge": "https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white", "logs": "" },
-    { "name": "Material-UI", "badge": "https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white", "logs": "" },
-    { "name": "Spring Boot", "badge": "https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white", "logs": "" },
-    { "name": "ReactJS", "badge": "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB", "logs": "" },
-    { "name": "Angular", "badge": "https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white", "logs": "" },
-    { "name": "Redux", "badge": "https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white", "logs": "" },
-    { "name": "JPA", "badge": "https://img.shields.io/badge/JPA-007396?style=for-the-badge&logo=hibernate&logoColor=white", "logs": "" },
-    { "name": "REST", "badge": "https://img.shields.io/badge/REST-02569B?style=for-the-badge&logo=rest&logoColor=white", "logs": "" },
-    { "name": "JWT", "badge": "https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white", "logs": "" },
-    { "name": "MySQL", "badge": "https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white", "logs": "" },
-    { "name": "PostgreSQL", "badge": "https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white", "logs": "" },
-    { "name": "Oracle", "badge": "https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white", "logs": "" },
-    { "name": "MongoDB", "badge": "https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white", "logs": "" },
-    { "name": "AWS (EC2, S3)", "badge": "https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white", "logs": "" },
-    { "name": "Azure", "badge": "https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white", "logs": "" },
-    { "name": "Docker", "badge": "https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white", "logs": "" },
-    { "name": "Jenkins", "badge": "https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white", "logs": "" },
-    { "name": "Ansible", "badge": "https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white", "logs": "" },
-    { "name": "OpenStack", "badge": "https://img.shields.io/badge/OpenStack-ED1944?style=for-the-badge&logo=openstack&logoColor=white", "logs": "" },
-    { "name": "Git", "badge": "https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white", "logs": "" },
-    { "name": "JIRA", "badge": "https://img.shields.io/badge/JIRA-0052CC?style=for-the-badge&logo=jira&logoColor=white", "logs": "" },
-    { "name": "Postman", "badge": "https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white", "logs": "" },
-    { "name": "IntelliJ IDEA", "badge": "https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white", "logs": "" },
-    { "name": "Eclipse", "badge": "https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white", "logs": "" },
-    { "name": "VS Code", "badge": "https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white", "logs": "" },
-    { "name": "DBeaver", "badge": "https://img.shields.io/badge/DBeaver-372923?style=for-the-badge&logo=dbeaver&logoColor=white", "logs": "" },
-    { "name": "JUnit", "badge": "https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white", "logs": "" },
-    { "name": "Mockito", "badge": "https://img.shields.io/badge/Mockito-4CAF50?style=for-the-badge&logo=mockito&logoColor=white", "logs": "" },
-    { "name": "Selenium", "badge": "https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white", "logs": "" },
-    { "name": "Microservices", "badge": "https://img.shields.io/badge/Microservices-FF6F00?style=for-the-badge&logo=microservices&logoColor=white", "logs": "" },
-    { "name": "Kafka", "badge": "https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white", "logs": "" },
-    { "name": "CI/CD", "badge": "https://img.shields.io/badge/CI/CD-007396?style=for-the-badge&logo=github-actions&logoColor=white", "logs": "" },
-    { "name": "Maven", "badge": "https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white", "logs": "" },
-    { "name": "Gradle", "badge": "https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white", "logs": "" }
+    { "name": "Java", "badge": "https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" },
+    { "name": "JavaScript", "badge": "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" },
+    { "name": "HTML5", "badge": "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" },
+    { "name": "CSS3", "badge": "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" },
+    { "name": "Bootstrap", "badge": "https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" },
+    { "name": "Material-UI", "badge": "https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white" },
+    { "name": "Spring Boot", "badge": "https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" },
+    { "name": "ReactJS", "badge": "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" },
+    { "name": "Angular", "badge": "https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" },
+    { "name": "Redux", "badge": "https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white" },
+    { "name": "JPA", "badge": "https://img.shields.io/badge/JPA-007396?style=for-the-badge&logo=hibernate&logoColor=white" },
+    { "name": "REST", "badge": "https://img.shields.io/badge/REST-02569B?style=for-the-badge&logo=rest&logoColor=white" },
+    { "name": "JWT", "badge": "https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white" },
+    { "name": "MySQL", "badge": "https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" },
+    { "name": "PostgreSQL", "badge": "https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" },
+    { "name": "Oracle", "badge": "https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" },
+    { "name": "MongoDB", "badge": "https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" },
+    { "name": "AWS (EC2, S3)", "badge": "https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" },
+    { "name": "Azure", "badge": "https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" },
+    { "name": "Docker", "badge": "https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" },
+    { "name": "Jenkins", "badge": "https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" },
+    { "name": "Ansible", "badge": "https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" },
+    { "name": "OpenStack", "badge": "https://img.shields.io/badge/OpenStack-ED1944?style=for-the-badge&logo=openstack&logoColor=white" },
+    { "name": "Git", "badge": "https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" },
+    { "name": "JIRA", "badge": "https://img.shields.io/badge/JIRA-0052CC?style=for-the-badge&logo=jira&logoColor=white" },
+    { "name": "Postman", "badge": "https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" },
+    { "name": "IntelliJ IDEA", "badge": "https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white" },
+    { "name": "Eclipse", "badge": "https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white" },
+    { "name": "VS Code", "badge": "https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" },
+    { "name": "DBeaver", "badge": "https://img.shields.io/badge/DBeaver-372923?style=for-the-badge&logo=dbeaver&logoColor=white" },
+    { "name": "JUnit", "badge": "https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white" },
+    { "name": "Mockito", "badge": "https://img.shields.io/badge/Mockito-4CAF50?style=for-the-badge&logo=mockito&logoColor=white" },
+    { "name": "Selenium", "badge": "https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white" },
+    { "name": "Microservices", "badge": "https://img.shields.io/badge/Microservices-FF6F00?style=for-the-badge&logo=microservices&logoColor=white" },
+    { "name": "Kafka", "badge": "https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white" },
+    { "name": "CI/CD", "badge": "https://img.shields.io/badge/CI/CD-007396?style=for-the-badge&logo=github-actions&logoColor=white" },
+    { "name": "Maven", "badge": "https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" },
+    { "name": "Gradle", "badge": "https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" }
   ],
   "projects": [
     {
       "title": "Qkart",
       "desc": "An E-commerce application offering a variety of products. Implemented the core logic for authentication, display and search products, shopping cart and checkout. Enhanced UI for responsive design across devices, ensuring a consistent user experience.",
       "stack": "React Hooks, Forms, Controlled Components, REST, JSON, React Router, Responsive Design, Debouncing",
-      "link": "OCT 2023 – Project Link"
+      "date": "OCT 2023",
+      "link": "https://github.com/Venkat0629/qkart"
     },
     {
       "title": "QTify",
       "desc": "A digital audio streaming service provider that offers free access to music, podcasts, and curated playlists. Created modular UI components including Cards, Carousels, and Buttons optimizing for reusability. Implemented an intuitive genre-based song filtering system using a tab component by modifying the one provided by Material UI, allowing users to browse songs by their preferred genre effortlessly.",
       "stack": "ReactJS, Module-scoped CSS, Flexbox, Swiper Library usage, API Integration and Data Handling, React Hooks",
-      "link": "DEC 2023 – Project Link"
+      "date": "DEC 2023",
+      "link": "https://github.com/Venkat0629/qtify"
     },
     {
       "title": "QTrip",
       "desc": "A travel website for adventure seekers. Created web pages using HTML and CSS and made them dynamic using JavaScript. Improved UX with multi-select filters, image carousels. Implemented conditional rendering of page elements.",
       "stack": "REST, Responsive Design, JSON, Event Handling, Conditional Rendering, Bootstrap Carousel",
-      "link": "AUG 2023 – Project Link"
+      "date": "AUG 2023",
+      "link": "https://github.com/Venkat0629/qtrip"
     },
     {
       "title": "VibeCart",
       "desc": "Developed VibeCart, an e-commerce website, leveraging modern frameworks to ensure scalability and performance. Developed a scalable e-commerce platform using Spring Boot and React. Led Account Management and Offer Management Services, designed and implemented core features.",
       "stack": "Spring Boot, React",
-      "link": "JUNE 2024 – Internal Project"
+      "date": "JUNE 2024",
+      "link": ""
     }
   ],
   "experience": [
@@ -121,17 +125,5 @@
     "cgpa": "8.2 CGPA",
     "location": "Guntur - Andhra Pradesh",
     "year": "APR 2021"
-  },
-  "educationItems": [
-    {
-      "id": "btech",
-      "title": "Bachelor Of Technology in Mechanical Engineering",
-      "level": "Graduation",
-      "institution": "Vignan's Lara Institute of Technology & Science",
-      "location": "Guntur - Andhra Pradesh",
-      "year": "APR 2021",
-      "logo": "/logos/college.png",
-      "grade": "8.2 CGPA"
-    }
-  ]
+  }
 }

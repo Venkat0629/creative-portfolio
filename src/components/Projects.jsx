@@ -11,7 +11,7 @@ const Projects = ({ projects }) => {
               <h3>{p.title}</h3>
               <p className="muted">{p.desc}</p>
               <p className="muted"><strong>Tech:</strong> {p.stack}</p>
-              <a className="btn" href={p.link} target="_blank" rel="noopener">View</a>
+              <a className="btn" href={p.link} target="_blank" rel="noopener" aria-label={`View project: ${p.title}`}>View</a>
             </article>
           ))}
         </div>
