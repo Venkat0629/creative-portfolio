@@ -1,0 +1,118 @@
+.back-portfolio-btn, .view-resume-btn {
+  background: linear-gradient(90deg, #1976d2 0%, #64b5f6 100%);
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.back-portfolio-btn:hover, .view-resume-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.18);
+  background: linear-gradient(90deg, #1565c0 0%, #90caf9 100%);
+}
+
+.view-resume-btn {
+  background: linear-gradient(90deg, #388e3c 0%, #81c784 100%);
+}
+
+.view-resume-btn:hover {
+  background: linear-gradient(90deg, #2e7d32 0%, #a5d6a7 100%);
+}
+
+.back-portfolio-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, #6366f1 0%, #2563eb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.back-portfolio-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.18);
+}
+
+.back-portfolio-btn .icon-wrapper {
+  animation: bounceArrowLeft 1.2s infinite;
+}
+
+@keyframes bounceArrowLeft {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+}
+
+.view-resume-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, #6366f1 0%, #2563eb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.view-resume-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.18);
+}
+
+.view-resume-btn .icon-wrapper {
+  animation: bounceArrowDown 1.2s infinite;
+}
+
+@keyframes bounceArrowDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+.btn-text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.icon-wrapper svg {
+  width: 28px;
+  height: 28px;
+}
+
+@keyframes bounceArrow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-6px); }
+}
+
+.btn-text {
+  margin-left: 0.3rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+}

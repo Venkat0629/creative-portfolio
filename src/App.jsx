@@ -9,18 +9,19 @@ import Certifications from './components/Certifications'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import { Routes, Route } from 'react-router-dom'
+import Resume from './Resume'
 
 function App() {
-  const [theme, setTheme] = useState('light')
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    const saved = localStorage.getItem('theme')
-    if (saved === 'dark' || saved === 'light') setTheme(saved)
-  }, [])
+  const getInitialTheme = () => {
+    const saved = localStorage.getItem('theme');
+    return saved === 'dark' || saved === 'light' ? saved : 'light';
+  };
+  const [theme, setTheme] = useState(getInitialTheme());
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
@@ -59,43 +60,41 @@ function App() {
 
   return (
     <div>
-      <Navbar
-        theme={theme}
-        toggleTheme={toggleTheme}
-        menuOpen={menuOpen}
-        toggleMenu={toggleMenu}
-        profileName={data?.profile?.name}
-      />
-
-      <main>
-        <Hero
-          loading={loading}
-          profile={data?.profile}
-          links={data?.links}
-        />
-
-        <About about={data?.about} />
-
-        <Skills skills={data?.skills} />
-
-        <Projects projects={data?.projects} />
-
-        <Experience experience={data?.experience} />
-
-        <Certifications
-          accomplishments={data?.accomplishments}
-          certifications={data?.certifications}
-        />
-
-        <Education
-          education={data?.education}
-          educationItems={data?.educationItems}
-        />
-
-        <Contact email={data?.links?.email} />
-      </main>
-
-      <Footer name={data?.profile?.name} />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Navbar
+              theme={theme}
+              toggleTheme={toggleTheme}
+              menuOpen={menuOpen}
+              toggleMenu={toggleMenu}
+              profileName={data?.profile?.name}
+            />
+            <main>
+              <Hero
+                loading={loading}
+                profile={data?.profile}
+                links={data?.links}
+              />
+              <About about={data?.about} />
+              <Skills skills={data?.skills} />
+              <Projects projects={data?.projects} />
+              <Experience experience={data?.experience} />
+              <Certifications
+                accomplishments={data?.accomplishments}
+                certifications={data?.certifications}
+              />
+              <Education
+                education={data?.education}
+                educationItems={data?.educationItems}
+              />
+              <Contact email={data?.links?.email} />
+            </main>
+            <Footer name={data?.profile?.name} />
+          </>
+        } />
+        <Route path="/resume" element={<Resume theme={theme} />} />
+      </Routes>
     </div>
   )
 }
