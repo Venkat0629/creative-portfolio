@@ -2,12 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Resume.css';
 
-export default function Resume({ theme }) {
+export default function Resume() {
   const resumeUrl = '/Resume.pdf';
   const navigate = useNavigate();
   return (
-    <div style={{ textAlign: 'center', margin: '2rem 0' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2rem', marginBottom: '2rem' }}>
+    <div className="resume-container">
+      <div className="resume-nav">
         <button
           className="back-portfolio-btn"
           onClick={() => navigate('/')}
@@ -28,7 +28,7 @@ export default function Resume({ theme }) {
         title="Resume"
         width="80%"
         height="800px"
-        style={{ border: '1px solid #ccc', borderRadius: '8px' }}
+        className="resume-iframe"
       />
     </div>
   );

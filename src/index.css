@@ -55,15 +55,28 @@ header.navbar {
   cursor: pointer;
   color: var(--text);
   transition: color .2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .brand:hover { color: var(--primary); }
+.profile-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform .2s ease;
+}
+.brand:hover .profile-logo {
+  transform: scale(1.1);
+}
 .nav-links { display: flex; flex-wrap: wrap; gap: 12px; }
 .nav-links .nav-link {
   color: var(--muted);
   text-decoration: none;
   padding: 8px 10px;
   border-radius: 8px;
-  transition: color .2s ease, background .2s ease;
+  transition: color .2s ease, background .2s ease, transform .15s ease;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -72,6 +85,7 @@ header.navbar {
 .nav-links .nav-link:hover, .nav-links .nav-link:focus {
   color: var(--text);
   background: var(--surface);
+  transform: scale(1.05);
   outline: none;
 }
 .nav-links .nav-link.active {
@@ -185,18 +199,10 @@ section.section {
   .cta { flex-direction: column; width: 100%; max-width: 280px; }
 }
 
-/* Enhanced hero animations */
+/* Enhanced hero animations - removed conflicting CSS animations, using Framer Motion instead */
+
 .hero h1 {
-  animation: fadeInUp 1s ease-out;
-}
-.hero .subtitle {
-  animation: fadeInUp 1s ease-out 0.2s both;
-}
-.hero .cta {
-  animation: fadeInUp 1s ease-out 0.4s both;
-}
-.hero .socials {
-  animation: fadeInUp 1s ease-out 0.6s both;
+  animation: none;
 }
 
 @keyframes fadeInUp {
@@ -375,6 +381,8 @@ footer { padding: 32px 0; color: var(--muted); text-align: center; }
 .edu-fields .value { font-weight: 600; }
 @media (max-width: 799px) {
   .edu-fields .row { grid-template-columns: 1fr; }
+}
+
 /* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
@@ -391,4 +399,237 @@ html {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* Error boundary styles */
+.error-boundary {
+  padding: 2rem;
+  text-align: center;
+  background: var(--surface);
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.error-boundary h2 {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.error-boundary p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.error-boundary button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.error-boundary details {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.error-boundary summary {
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.error-boundary pre {
+  background: var(--bg);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  overflow: auto;
+  margin-top: 1rem;
+}
+
+/* App error styles */
+.app-error {
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-error h2 {
+  color: var(--text);
+}
+
+.app-error p {
+  color: var(--muted);
+}
+
+.app-error button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Contact form message styles */
+.contact-message {
+  margin-top: 1rem;
+  color: var(--primary);
+}
+
+.contact-message.error {
+  color: #ef4444;
+}
+
+/* Experience period styles */
+.experience-period {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Skills container styles */
+.skills-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Hero loading spinner styles */
+.hero-loading {
+  text-align: center;
+}
+
+.hero-loading .spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border);
+  border-top: 4px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+.hero-loading p {
+  color: var(--muted);
+}
+
+/* Card clickable styles */
+.card.clickable {
+  cursor: pointer;
+}
+
+/* Profile logo styles */
+.profile-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Error boundary styles */
+.error-boundary {
+  padding: 2rem;
+  text-align: center;
+  background: var(--surface);
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.error-boundary h2 {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.error-boundary p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.error-boundary button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.error-boundary details {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.error-boundary summary {
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.error-boundary pre {
+  background: var(--bg);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  overflow: auto;
+  margin-top: 1rem;
+}
+
+/* Contact form message styles */
+.contact-message {
+  margin-top: 1rem;
+  color: var(--primary);
+}
+
+.contact-message.error {
+  color: #ef4444;
+}
+
+/* Experience period styles */
+.experience-period {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Skills container styles */
+.skills-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Loading spinner styles */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border);
+  border-top: 4px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+.loading-spinner-container {
+  text-align: center;
+}
+
+/* Resume styles */
+.resume-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.resume-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.resume-iframe {
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }

@@ -1,50 +1,43 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import Card from './Card';
+import { ANIMATION_VARIANTS } from '../config/constants';
 
-const EducationItem = ({ ed }) => {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="edu-item">
-      <div className="edu-dot" aria-hidden="true"></div>
-      <div className="edu-row">
-        <img className="edu-logo" src={ed.logo} alt="" role="presentation" />
-        <div>
-          <div className="edu-title">{ed.title} — {ed.institution}</div>
-          <div className="edu-meta">{ed.location ? `${ed.location} • ` : ''}{ed.year}</div>
-        </div>
-        <div className="edu-actions">
-          <div className="edu-badges" aria-label="Badges">
-            {(ed.badges || []).map((b) => <span className="edu-badge" key={b}>{b}</span>)}
-          </div>
-          <button className="btn" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
-            {open ? 'Hide' : 'Details'}
-          </button>
-          {ed.certificateUrl ? <a className="btn" href={ed.certificateUrl} target="_blank" rel="noopener">Certificate</a> : null}
-          {ed.shareUrl ? <a className="btn" href={ed.shareUrl} target="_blank" rel="noopener">Share</a> : null}
-        </div>
-      </div>
-      <div className={`edu-details ${open ? 'open' : ''}`}>
-        <div className="inner">
-          <div>{ed.details}</div>
-          <div className="edu-skills" aria-label="Skills acquired">
-            {(ed.skills || []).map((s) => <span className="edu-skill" key={s}>{s}</span>)}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const Education = ({ education, educationItems }) => {
+const Education = React.memo(({ education, educationItems }) => {
   return (
     <section id="education" className="section">
       <div className="container">
-        <h2>Education</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Education
+        </motion.h2>
         {(educationItems && educationItems.length > 0) ? (
-          <div className="grid cols-2">
-            {educationItems.map((ed) => (
-              <article className="card" key={ed.id}>
+          <motion.div
+            className="grid cols-2"
+            variants={ANIMATION_VARIANTS.staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {educationItems.map((ed, index) => (
+              <Card key={ed.id} delay={index}>
                 <div className="edu-card-header">
-                  <img className="edu-logo" src={ed.logo} alt="" role="presentation" />
+                  <motion.img
+                    className="edu-logo"
+                    src={ed.logo}
+                    alt=""
+                    role="presentation"
+                    loading="lazy"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  />
                   <div>
                     <h3 className="edu-title">{ed.title}</h3>
                     <p className="edu-meta">{ed.institution}{ed.location ? ` • ${ed.location}` : ''}</p>
@@ -55,13 +48,23 @@ const Education = ({ education, educationItems }) => {
                   <div className="row"><span className="label">Grade</span><span className="value">{ed.grade || education?.cgpa || '—'}</span></div>
                   <div className="row"><span className="label">Year</span><span className="value">{ed.year || education?.year || '—'}</span></div>
                 </div>
-              </article>
+              </Card>
             ))}
-          </div>
+          </motion.div>
         ) : (
-          <article className="card">
+          <Card delay={0}>
             <div className="edu-card-header">
-              <img className="edu-logo" src="/logos/college.png" alt="" role="presentation" />
+              <motion.img
+                className="edu-logo"
+                src="/logos/college.png"
+                alt=""
+                role="presentation"
+                loading="lazy"
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              />
               <div>
                 <h3 className="edu-title">{education?.degree}</h3>
                 <p className="edu-meta">{education?.college}{education?.location ? ` • ${education?.location}` : ''}</p>
@@ -72,12 +75,33 @@ const Education = ({ education, educationItems }) => {
               <div className="row"><span className="label">Grade</span><span className="value">{education?.cgpa || '—'}</span></div>
               <div className="row"><span className="label">Year</span><span className="value">{education?.year || '—'}</span></div>
             </div>
-          </article>
+          </Card>
         )}
       </div>
     </section>
   );
+});
+
+Education.propTypes = {
+  education: PropTypes.shape({
+    degree: PropTypes.string,
+    college: PropTypes.string,
+    location: PropTypes.string,
+    cgpa: PropTypes.string,
+    year: PropTypes.string
+  }),
+  educationItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      level: PropTypes.string,
+      institution: PropTypes.string.isRequired,
+      location: PropTypes.string,
+      year: PropTypes.string,
+      logo: PropTypes.string,
+      grade: PropTypes.string
+    })
+  )
 };
 
 export default Education;
-export { EducationItem };

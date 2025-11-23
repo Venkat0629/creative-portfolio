@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import ErrorBoundary from './components/ErrorBoundary'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -9,8 +11,8 @@ import Certifications from './components/Certifications'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import { Routes, Route } from 'react-router-dom'
 import Resume from './Resume'
+import { THEME_STORAGE_KEY, DEFAULT_THEME } from './config/constants'
 
 function App() {
   const getInitialTheme = () => {
@@ -50,7 +52,7 @@ function App() {
 
   if (error) {
     return (
-      <div style={{ padding: '2rem', textAlign: 'center' }}>
+      <div className="app-error">
         <h2>Error Loading Portfolio</h2>
         <p>{error}</p>
         <button onClick={() => window.location.reload()}>Retry</button>
@@ -59,43 +61,45 @@ function App() {
   }
 
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={
-          <>
-            <Navbar
-              theme={theme}
-              toggleTheme={toggleTheme}
-              menuOpen={menuOpen}
-              toggleMenu={toggleMenu}
-              profileName={data?.profile?.name}
-            />
-            <main>
-              <Hero
-                loading={loading}
-                profile={data?.profile}
-                links={data?.links}
+    <ErrorBoundary>
+      <div>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Navbar
+                theme={theme}
+                toggleTheme={toggleTheme}
+                menuOpen={menuOpen}
+                toggleMenu={toggleMenu}
+                profileName={data?.profile?.name}
               />
-              <About about={data?.about} />
-              <Skills skills={data?.skills} />
-              <Projects projects={data?.projects} />
-              <Experience experience={data?.experience} />
-              <Certifications
-                accomplishments={data?.accomplishments}
-                certifications={data?.certifications}
-              />
-              <Education
-                education={data?.education}
-                educationItems={data?.educationItems}
-              />
-              <Contact email={data?.links?.email} />
-            </main>
-            <Footer name={data?.profile?.name} />
-          </>
-        } />
-        <Route path="/resume" element={<Resume theme={theme} />} />
-      </Routes>
-    </div>
+              <main>
+                <Hero
+                  loading={loading}
+                  profile={data?.profile}
+                  links={data?.links}
+                />
+                <About about={data?.about} />
+                <Skills skills={data?.skills} />
+                <Projects projects={data?.projects} />
+                <Experience experience={data?.experience} />
+                <Certifications
+                  accomplishments={data?.accomplishments}
+                  certifications={data?.certifications}
+                />
+                <Education
+                  education={data?.education}
+                  educationItems={data?.educationItems}
+                />
+                <Contact email={data?.links?.email} />
+              </main>
+              <Footer name={data?.profile?.name} />
+            </>
+          } />
+          <Route path="/resume" element={<Resume theme={theme} />} />
+        </Routes>
+      </div>
+    </ErrorBoundary>
   )
 }
 

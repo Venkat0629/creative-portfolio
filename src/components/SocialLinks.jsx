@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SocialLinks = ({ email, github, linkedin }) => {
   return (
@@ -14,6 +15,12 @@ const SocialLinks = ({ email, github, linkedin }) => {
       </a>
     </div>
   );
+};
+
+SocialLinks.propTypes = {
+  email: PropTypes.string,
+  github: PropTypes.string,
+  linkedin: PropTypes.string
 };
 
 export default SocialLinks;

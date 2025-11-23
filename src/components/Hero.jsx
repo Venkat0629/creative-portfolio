@@ -1,23 +1,58 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import SocialLinks from './SocialLinks';
+import { ANIMATION_VARIANTS } from '../config/constants';
 
-const Hero = ({ loading, profile, links }) => {
+const Hero = React.memo(({ loading, profile, links }) => {
   return (
     <section id="home" className="section">
       <div className="container hero">
         {loading ? (
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ width: '40px', height: '40px', border: '4px solid #e5e7eb', borderTop: '4px solid #2563eb', borderRadius: '50%', animation: 'spin 1s linear infinite', margin: '0 auto 1rem' }}></div>
+          <motion.div
+            className="loading-spinner-container"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="loading-spinner"></div>
             <p className="muted">Loading...</p>
-          </div>
+          </motion.div>
         ) : (
-          <>
-            <p className="muted">{profile?.location}</p>
-            <h1>{profile?.name}</h1>
-            <p className="subtitle">{profile?.title}</p>
-          </>
+          <motion.div
+            variants={ANIMATION_VARIANTS.staggerContainer}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.p
+              className="muted"
+              variants={ANIMATION_VARIANTS.fadeInUp}
+            >
+              {profile?.location}
+            </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              {profile?.name || 'Your Name'}
+            </motion.h1>
+            <motion.p
+              className="subtitle"
+              variants={ANIMATION_VARIANTS.fadeInUp}
+            >
+              {profile?.title}
+            </motion.p>
+          </motion.div>
         )}
-        <div className="cta" role="group" aria-label="Primary actions">
+        <motion.div
+          className="cta"
+          role="group"
+          aria-label="Primary actions"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
           <a className="btn primary view-resume-btn" href="/resume" aria-label="Open Resume">
             <span className="icon-wrapper">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,11 +62,31 @@ const Hero = ({ loading, profile, links }) => {
             </span>
             <span className="btn-text">View Resume</span>
           </a>
-        </div>
-        <SocialLinks email={links?.email} github={links?.github} linkedin={links?.linkedin} />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <SocialLinks email={links?.email} github={links?.github} linkedin={links?.linkedin} />
+        </motion.div>
       </div>
     </section>
   );
+});
+
+Hero.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  profile: PropTypes.shape({
+    name: PropTypes.string,
+    title: PropTypes.string,
+    location: PropTypes.string
+  }),
+  links: PropTypes.shape({
+    email: PropTypes.string,
+    github: PropTypes.string,
+    linkedin: PropTypes.string
+  })
 };
 
 export default Hero;
