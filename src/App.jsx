@@ -12,14 +12,7 @@ import CertificationGrid from '../sections/CertificationGrid';
 import EducationSection from '../sections/EducationSection';
 import ContactSection from '../sections/ContactSection';
 import Resume from '../Resume';
-
-const ErrorBoundary = ({ error, retry }) => (
-  <div style={{ padding: '2rem', textAlign: 'center' }}>
-    <h2>Error Loading Portfolio</h2>
-    <p>{error}</p>
-    <button onClick={retry}>Retry</button>
-  </div>
-);
+import ErrorBoundary from '../components/ErrorBoundary';
 
 function App() {
   const { data, loading, error, refetch } = usePortfolioData();
@@ -27,10 +20,8 @@ function App() {
   const [menuOpen, toggleMenu] = useToggle();
   const responsive = useResponsive();
 
-  if (error) return <ErrorBoundary error={error} retry={refetch} />;
-
   return (
-    <div>
+    <ErrorBoundary onRetry={refetch}>
       <Routes>
         <Route path="/" element={
           <>
@@ -50,7 +41,7 @@ function App() {
         } />
         <Route path="/resume" element={<Resume theme={theme} />} />
       </Routes>
-    </div>
+    </ErrorBoundary>
   );
 }
 
