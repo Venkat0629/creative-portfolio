@@ -2,6 +2,23 @@ import PropTypes from 'prop-types';
 import Section from '../ui/Section/Section';
 import Card from '../ui/Card/Card';
 import Typography from '../ui/Typography/Typography';
+import { useScrollAnimation } from '../hooks';
+
+const EduCard = ({ item, delay }) => {
+  const { ref } = useScrollAnimation('animate-fade-in', [delay]);
+  return (
+    <Card ref={ref} data-animate="true" style={{ transitionDelay: `${delay}ms` }} className="edu-card">
+      <Typography variant="h5">{item.title}</Typography>
+      <Typography variant="body">{item.institution}</Typography>
+      <Typography variant="caption">{item.year} ({item.grade})</Typography>
+    </Card>
+  );
+};
+
+EduCard.propTypes = {
+  item: PropTypes.object.isRequired,
+  delay: PropTypes.number,
+};
 
 const EducationSection = ({ education = {}, educationItems = [] }) => (
   <Section id="education" bgVariant="default" title="Education">
@@ -11,12 +28,8 @@ const EducationSection = ({ education = {}, educationItems = [] }) => (
       <Typography variant="caption" color="secondary">{education.year}, {education.cgpa}</Typography>
     </Card>
     <div className="edu-grid">
-      {educationItems.map((item) => (
-        <Card key={item.id} className="edu-card">
-          <Typography variant="h5">{item.title}</Typography>
-          <Typography variant="body">{item.institution}</Typography>
-          <Typography variant="caption">{item.year} ({item.grade})</Typography>
-        </Card>
+      {educationItems.map((item, i) => (
+        <EduCard key={item.id} item={item} delay={i * 120} />
       ))}
     </div>
   </Section>
