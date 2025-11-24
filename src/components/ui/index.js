@@ -1,1 +1,1 @@
-export { default as Skeleton } from './Skeleton/Skeleton';
+export { default as Modal } from './Modal/Modal';
